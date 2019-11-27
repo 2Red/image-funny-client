@@ -20,7 +20,7 @@ class ImageList extends React.Component {
         return (
             <div className="row">
                 {this.state.imageList.map(item => <div className="col-md-4" key={item._id}>
-                    <div className="mg-list">
+                    <div className="img-list">
                         <img className="img-custom" alt={item.category} src={this.handleImagePath(item.path)} />
                     </div>
                 </div>)}
