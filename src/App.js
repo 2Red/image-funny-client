@@ -2,26 +2,26 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import SearchBox from './components/SearchBox';
-import ImageList from './components/ImageList';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Admin from './components/Admin';
+import {
+  Switch,
+  Route
+} from 'react-router-dom';
 
 class App extends React.Component {
-  state = {
-    imageList: []
-  };
-
-  handleSearch = (result) => {
-    this.setState({
-      imageList: result.data
-    });
-  }
-
   render() {
     return (
-      <div className="container">
+      <div className='container-fuild'>
         <Header />
-        <SearchBox onSearch={this.handleSearch} />
-        <ImageList imageList={this.state.imageList} />
+        <div className='main'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/admin' component={Admin} />
+          </Switch>
+        </div>
+        <Footer />
       </div>
     );
   }

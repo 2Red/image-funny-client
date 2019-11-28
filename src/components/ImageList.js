@@ -18,10 +18,10 @@ class ImageList extends React.Component {
 
     render() {
         return (
-            <div className="row">
-                {this.state.imageList.map(item => <div className="col-md-4" key={item._id}>
-                    <div className="img-list">
-                        <img className="img-custom" alt={item.category} src={this.handleImagePath(item.path)} />
+            <div className='row'>
+                {this.state.imageList.map(item => <div className='col-md-3' key={item._id}>
+                    <div className='img-list'>
+                        <img className='img-custom' alt={item.category} src={this.handleImagePath(item.path)} />
                     </div>
                 </div>)}
             </div>

@@ -3,9 +3,9 @@ import React from 'react';
 class Header extends React.Component {
     render() {
         return (
-            <div className="text-center">
-                <h1>Image <span style={{ color: 'red' }}>Funny</span></h1>
-            </div>
+            <header className='text-center'>
+                <h1><a href='/' style={{ textDecoration: 'none' }}>Image <span style={{ color: 'red' }}>Funny</span></a></h1>
+            </header>
         )
     }
 }

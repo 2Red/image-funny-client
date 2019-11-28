@@ -25,7 +25,7 @@ class SearchBox extends React.Component {
     render() {
         return (
             <div>
-                <input onKeyDown={this.handleKeyDown} className="form-control" type="text" placeholder="Enter key word to search image" />
+                <input onKeyDown={this.handleKeyDown} className='form-control' type='text' placeholder='Enter key word to search image' />
             </div>
         )
     }
