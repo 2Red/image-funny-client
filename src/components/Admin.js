@@ -40,7 +40,13 @@ class Admin extends React.Component {
             {
                 body: data,
                 method: "post"
-            }).then(res => alert('Upload successfully!')).catch(err => alert('Server Error!'));
+            }).then(res => {
+                alert('Upload successfully!'); this.setState({
+                    selectedFile: null,
+                    category: '',
+                    search_key: ''
+                })
+            }).catch(err => alert('Server Error!'));
     }
 
     render() {
@@ -52,11 +58,11 @@ class Admin extends React.Component {
                 </div>
                 <div className='form-group'>
                     <label>Category:</label>
-                    <input type='text' name='category' className='form-control' value={this.state.inputValue} onChange={this.updateCategory} />
+                    <input type='text' name='category' className='form-control' value={this.state.category} onChange={this.updateCategory} />
                 </div>
                 <div className='form-group'>
                     <label>Search key:</label>
-                    <input type='text' name='search_key' className='form-control' value={this.state.inputValue} onChange={this.updateSearchKey} />
+                    <input type='text' name='search_key' className='form-control' placeholder='cân;cà khịa;dog' value={this.state.search_key} onChange={this.updateSearchKey} />
                 </div>
                 <button className='btn btn-primary' type='button' onClick={this.onClickHandler}>Upload</button>
             </form>
